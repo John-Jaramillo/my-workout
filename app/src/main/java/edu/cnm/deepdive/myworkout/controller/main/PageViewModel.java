@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.myworkout.ui.main;
+package edu.cnm.deepdive.myworkout.controller.main;
 
 import androidx.arch.core.util.Function;
 import androidx.lifecycle.LiveData;

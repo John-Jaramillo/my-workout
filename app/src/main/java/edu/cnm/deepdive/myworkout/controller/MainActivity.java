@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.myworkout;
+package edu.cnm.deepdive.myworkout.controller;
 
 import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -6,10 +6,9 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import edu.cnm.deepdive.myworkout.ui.main.SectionsPagerAdapter;
+import edu.cnm.deepdive.myworkout.R;
+import edu.cnm.deepdive.myworkout.controller.main.SectionsPagerAdapter;
 
 public class MainActivity extends AppCompatActivity {
 

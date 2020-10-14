@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.myworkout.ui.main;
+package edu.cnm.deepdive.myworkout.controller.main;
 
 import android.content.Context;
 import androidx.annotation.Nullable;
