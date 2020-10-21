@@ -64,3 +64,5 @@ This Android app will allow a user to create an exercise routine by choosing fro
 ## ERD
 
 <a href="erd.md">ERD for this app.</a>
+
+https://john-jaramillo.github.io/my-workout/erd.md
