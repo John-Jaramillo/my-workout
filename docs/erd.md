@@ -1,3 +1,3 @@
-<a href="pdf/myworkout.pdf">![Image](img/myworkout.png)</a>
+![Image](img/myworkout.png)
 
 This should be clickable.
