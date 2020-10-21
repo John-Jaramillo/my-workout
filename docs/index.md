@@ -59,7 +59,7 @@ This Android app will allow a user to create an exercise routine by choosing fro
 
 ## [Wireframe](wireframe.md)
 
-## [ERD](wireframe.md)
+## [ERD](erd.md)
 
 
 

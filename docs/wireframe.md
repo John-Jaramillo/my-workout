@@ -1,1 +1,1 @@
-<a href ="../pdf/workout.pdf">![Wireframe diagram](img/workout.png)
+## [![WireFrame](img/workout.png)](pdf/workout.pdf)
