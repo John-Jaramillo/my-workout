@@ -1,5 +1,3 @@
 ## ERD
 
-![Image](img/myworkout.png)
-
-This should be clickable.
+<a href="pdf/myworkout.pdf">![ERD Image](img/myworkout.png)</a>
