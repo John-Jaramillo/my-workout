@@ -1,1 +1,1 @@
-## [![ERD](img/myworkout.png)](pdf/myworkout.pdf)
+## [![ERD](img/erd.png)](pdf/erd.pdf)

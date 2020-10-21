@@ -1,1 +1,1 @@
-## [![WireFrame](img/workout.png)](pdf/workout.pdf)
+## [![WireFrame](img/wireframe.png)](pdf/wireframe.pdf)
