@@ -39,8 +39,8 @@ This Android app will allow a user to create an exercise routine by choosing fro
 ## Device/external services
 
 * The list of resistance exercises from Google APIs for Android and/or wger Workout Manager.
-    * https://developers.google.com/android/reference/com/google/android/gms/fitness/data/WorkoutExercises
-    * https://wger.de/en/software/api
+    * <https://developers.google.com/android/reference/com/google/android/gms/fitness/data/WorkoutExercises>
+    * <https://wger.de/en/software/api>
 
     * Access to these services would be during development to download the exercise information and store it in a SQL database. This would only require access to the service once. The wger database seems to have more information on each exercise but when I tried to browse the API I got what looked like test data so I'm not sure if I wasn't doing it right or if the API isn't usable.
 
