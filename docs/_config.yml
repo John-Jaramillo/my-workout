@@ -13,3 +13,4 @@ description: "An exercise app."
 author:
   name: "John Jaramillo"
   
+theme: jekyll-theme-midnight
