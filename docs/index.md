@@ -60,3 +60,7 @@ This Android app will allow a user to create an exercise routine by choosing fro
 ## Wireframe
 
 ![Wireframe diagram](img/workout.png)
+
+## ERD
+
+<a href="erd.md">ERD for this app.</a>
