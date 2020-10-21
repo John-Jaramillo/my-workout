@@ -57,14 +57,9 @@ This Android app will allow a user to create an exercise routine by choosing fro
 
 * Recommend exercise routines based on the user's goal (weight loss, strength, endurance, etc.) and fitness level (sedentary, mildly active, etc.).
 
-## Wireframe
+## [Wireframe](wireframe.md)
 
-![Wireframe diagram](img/workout.png)
+## [ERD](wireframe.md)
 
-## ERD
-
-This is the first draft for the ERD of this app.
-
-<a href="pdf/myworkout.pdf">![Image](img/myworkout.png)</a>
 
 
