@@ -63,6 +63,6 @@ This Android app will allow a user to create an exercise routine by choosing fro
 
 ## ERD
 
-<a href="erd.md">ERD for this app.</a>
+<a href="pdf/myworkout.pdf">![Image](img/myworkout.png)</a>
 
-![Image](img/myworkout.png)
+
