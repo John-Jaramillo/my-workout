@@ -1,16 +1,14 @@
 package edu.cnm.deepdive.myworkout.model.entity;
 
-import io.reactivex.annotations.NonNull;
-import java.util.UUID;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
+@Entity
 public class Routine {
 
-  @NonNull
-  @Id
-  @GeneratedValue(generator = "uuid2")
-  @GenericGenerator(name = "uuid2", strategy = "uuid2")
-  @Column(name = "routine_id", nullable = false, updatable = false,
-      columnDefinition = "CHAR(16) FOR BIT DATA")
-  private UUID id;
+  @PrimaryKey(autoGenerate = true)
+  @ColumnInfo(name = "routine_id")
+  private long Id;
 
 }

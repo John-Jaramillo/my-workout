@@ -1,18 +1,20 @@
 package edu.cnm.deepdive.myworkout.model.entity;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 import io.reactivex.annotations.NonNull;
 import java.util.Date;
-import java.util.UUID;
 
+@Entity
 public class Progress {
 
-  @NonNull
-  @Id
-  @GeneratedValue(generator = "uuid2")
-  @GenericGenerator(name = "uuid2", strategy = "uuid2")
-  @Column(name = "progress_id", nullable = false, updatable = false,
-      columnDefinition = "CHAR(16) FOR BIT DATA")
-  private UUID id;
+  @PrimaryKey(autoGenerate = true)
+  @ColumnInfo(name = "progress_id")
+  private long Id;
+
+  // TODO ManyToOne
+  // TODO 2nd ManyToOne
 
   @NonNull
   private Date date;

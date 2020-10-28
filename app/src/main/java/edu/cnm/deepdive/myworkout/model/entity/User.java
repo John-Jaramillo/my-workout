@@ -1,24 +1,22 @@
 package edu.cnm.deepdive.myworkout.model.entity;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 import io.reactivex.annotations.NonNull;
-import java.util.UUID;
 
+@Entity
 public class User {
 
-  @NonNull
-  @Id
-  @GeneratedValue(generator = "uuid2")
-  @GenericGenerator(name = "uuid2", strategy = "uuid2")
-  @Column(name = "user_id", nullable = false, updatable = false,
-      columnDefinition = "CHAR(16) FOR BIT DATA")
-  private UUID id;
+  @PrimaryKey(autoGenerate = true)
+  @ColumnInfo(name = "user_id")
+  private long Id;
 
   @NonNull
-  @Column
   private String name;
 
   @NonNull
-  @Column(nullable = false, updatable = false, unique = true)
+  @ColumnInfo()
   private String oauthKey;
 
   private Long height;

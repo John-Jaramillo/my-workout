@@ -1,15 +1,17 @@
 package edu.cnm.deepdive.myworkout.model.entity;
 
-import io.reactivex.annotations.NonNull;
-import java.util.UUID;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
+@Entity
 public class ExerciseMuscle {
 
-  @NonNull
-  @Id
-  @GeneratedValue(generator = "uuid2")
-  @GenericGenerator(name = "uuid2", strategy = "uuid2")
-  @Column(name = "exercise_muscle_id", nullable = false, updatable = false,
-      columnDefinition = "CHAR(16) FOR BIT DATA")
-  private UUID id;
+  @PrimaryKey(autoGenerate = true)
+  @ColumnInfo(name = "exercise_muscle_id")
+  private long Id;
+
+  // TODO ManyToOne
+  // TODO 2nd ManyToOne
+
 }
