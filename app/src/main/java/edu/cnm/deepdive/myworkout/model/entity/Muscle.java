@@ -16,11 +16,10 @@ public class Muscle {
   private String name;
 
   @NonNull
-  @ColumnInfo(name = "muscle_group")
-  private MuscleGroup muscleGroup;
+  private Area area;
 
 
-  private enum MuscleGroup {
+  private enum Area {
     CHEST, UPPER_BACK, LOWER_BACK, UPPER_ARM, LOWER_ARM, ABS, SHOULDERS,
         NECK, UPPER_LEG, LOWER_LEG
   }
