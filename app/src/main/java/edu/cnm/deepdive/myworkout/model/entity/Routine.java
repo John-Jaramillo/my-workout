@@ -7,9 +7,6 @@ import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
 @Entity(
-    indices = {
-        @Index(value = {"user_id", "exercise_id"}, unique = true)
-    },
     foreignKeys = {
         @ForeignKey(entity = User.class, parentColumns = {"user_id"}, childColumns = {"user_id"},
             onDelete = ForeignKey.CASCADE),
@@ -33,5 +30,38 @@ public class Routine {
 
   private enum Day {
     SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY
+  }
+
+
+  public long getId() {
+    return Id;
+  }
+
+  public void setId(long id) {
+    Id = id;
+  }
+
+  public long getUserId() {
+    return userId;
+  }
+
+  public void setUserId(long userId) {
+    this.userId = userId;
+  }
+
+  public long getExerciseId() {
+    return exerciseId;
+  }
+
+  public void setExerciseId(long exerciseId) {
+    this.exerciseId = exerciseId;
+  }
+
+  public Day getDay() {
+    return day;
+  }
+
+  public void setDay(Day day) {
+    this.day = day;
   }
 }

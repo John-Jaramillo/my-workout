@@ -1,9 +1,9 @@
 package edu.cnm.deepdive.myworkout.model.entity;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-import io.reactivex.annotations.NonNull;
 
 @Entity
 public class Equipment {
@@ -15,4 +15,21 @@ public class Equipment {
   @NonNull
   private String name;
 
+
+  public long getId() {
+    return Id;
+  }
+
+  public void setId(long id) {
+    Id = id;
+  }
+
+  @NonNull
+  public String getName() {
+    return name;
+  }
+
+  public void setName(@NonNull String name) {
+    this.name = name;
+  }
 }

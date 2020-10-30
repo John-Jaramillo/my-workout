@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey;
 
 @Entity(
     indices = {
-        @Index(value = {"exercise_id", "muscle_id"}, unique = true)
+        @Index(value = {"exercise_id"}, unique = true)
     },
     foreignKeys = {
         @ForeignKey(entity = User.class, parentColumns = {"exercise_id"}, childColumns = {"exercise_id"},
@@ -23,7 +23,7 @@ public class ExerciseMuscle {
   @ColumnInfo(name = "exercise_muscle_id")
   private long Id;
 
-  @ColumnInfo(name = "exercise_id", index = true)
+  @ColumnInfo(name = "exercise_id")
   private long exerciseId;
 
   @ColumnInfo(name = "muscle_id", index = true)
@@ -31,4 +31,36 @@ public class ExerciseMuscle {
 
   private boolean primary;
 
+
+  public long getId() {
+    return Id;
+  }
+
+  public void setId(long id) {
+    Id = id;
+  }
+
+  public long getExerciseId() {
+    return exerciseId;
+  }
+
+  public void setExerciseId(long exerciseId) {
+    this.exerciseId = exerciseId;
+  }
+
+  public long getMuscleId() {
+    return muscleId;
+  }
+
+  public void setMuscleId(long muscleId) {
+    this.muscleId = muscleId;
+  }
+
+  public boolean isPrimary() {
+    return primary;
+  }
+
+  public void setPrimary(boolean primary) {
+    this.primary = primary;
+  }
 }

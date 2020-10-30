@@ -23,9 +23,34 @@ public class ExerciseEquipment {
   @ColumnInfo(name = "exercise_equipment_id")
   private long Id;
 
-  @ColumnInfo(name = "exercise_id", index = true)
+  @ColumnInfo(name = "exercise_id")
   private long exerciseId;
 
-  @ColumnInfo(name = "equipment_id", index = true)
+  @ColumnInfo(name = "equipment_id")
   private long equipmentId;
+
+
+  public long getId() {
+    return Id;
+  }
+
+  public void setId(long id) {
+    Id = id;
+  }
+
+  public long getExerciseId() {
+    return exerciseId;
+  }
+
+  public void setExerciseId(long exerciseId) {
+    this.exerciseId = exerciseId;
+  }
+
+  public long getEquipmentId() {
+    return equipmentId;
+  }
+
+  public void setEquipmentId(long equipmentId) {
+    this.equipmentId = equipmentId;
+  }
 }
