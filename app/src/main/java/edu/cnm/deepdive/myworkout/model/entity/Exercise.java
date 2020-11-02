@@ -16,7 +16,7 @@ public class Exercise {
   private String name;
 
   @NonNull
-  private Type type;
+  private ExerciseType exerciseType;
 
   @NonNull
   private String description;
@@ -40,12 +40,12 @@ public class Exercise {
   }
 
   @NonNull
-  public Type getType() {
-    return type;
+  public ExerciseType getExerciseType() {
+    return exerciseType;
   }
 
-  public void setType(@NonNull Type type) {
-    this.type = type;
+  public void setExerciseType(@NonNull ExerciseType exerciseType) {
+    this.exerciseType = exerciseType;
   }
 
   @NonNull
@@ -57,7 +57,7 @@ public class Exercise {
     this.description = description;
   }
 
-  private enum Type {
+  private enum ExerciseType {
     AEROBIC, STRENGTH
   }
 }
