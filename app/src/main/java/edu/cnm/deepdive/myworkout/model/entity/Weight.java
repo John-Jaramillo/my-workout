@@ -35,4 +35,29 @@ public class Weight {
   public void setId(long id) {
     Id = id;
   }
+
+  public long getUserId() {
+    return userId;
+  }
+
+  public void setUserId(long userId) {
+    this.userId = userId;
+  }
+
+  public float getWeight() {
+    return weight;
+  }
+
+  public void setWeight(float weight) {
+    this.weight = weight;
+  }
+
+  @NonNull
+  public Date getDate() {
+    return date;
+  }
+
+  public void setDate(@NonNull Date date) {
+    this.date = date;
+  }
 }

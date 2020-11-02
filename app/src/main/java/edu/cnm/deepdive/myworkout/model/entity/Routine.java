@@ -1,10 +1,13 @@
 package edu.cnm.deepdive.myworkout.model.entity;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
+import androidx.room.TypeConverter;
+import edu.cnm.deepdive.myworkout.model.entity.Muscle.Area;
 
 @Entity(
     foreignKeys = {
@@ -26,6 +29,7 @@ public class Routine {
   @ColumnInfo(name = "exercise_id", index = true)
   private long exerciseId;
 
+  @NonNull
   private Day day;
 
   private int order;
@@ -55,11 +59,12 @@ public class Routine {
     this.exerciseId = exerciseId;
   }
 
+  @NonNull
   public Day getDay() {
     return day;
   }
 
-  public void setDay(Day day) {
+  public void setDay(@NonNull Day day) {
     this.day = day;
   }
 
@@ -72,7 +77,17 @@ public class Routine {
   }
 
 
-  private enum Day {
-    SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY
+  public enum Day {
+    SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY;
+
+    @TypeConverter
+    public static Integer dayToInteger(Day value) {
+      return (value != null) ? value.ordinal() : null;
+    }
+
+    @TypeConverter
+    public static Day integerToDay(Integer value) {
+      return (value != null) ? Day.values()[value] : null;
+    }
   }
 }

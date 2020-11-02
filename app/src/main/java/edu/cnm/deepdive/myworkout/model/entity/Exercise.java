@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
+import androidx.room.TypeConverter;
 
 @Entity
 public class Exercise {
@@ -16,6 +17,7 @@ public class Exercise {
   private String name;
 
   @NonNull
+  @ColumnInfo(name = "exercise_type", index = true)
   private ExerciseType exerciseType;
 
   @NonNull
@@ -57,7 +59,17 @@ public class Exercise {
     this.description = description;
   }
 
-  private enum ExerciseType {
-    AEROBIC, STRENGTH
+  public enum ExerciseType {
+    AEROBIC, STRENGTH;
+
+    @TypeConverter
+    public static Integer exerciseTypeToInteger(ExerciseType value) {
+      return (value != null) ? value.ordinal() : null;
+    }
+
+    @TypeConverter
+    public static ExerciseType integerToExerciseType(Integer value) {
+      return (value != null) ? ExerciseType.values()[value] : null;
+    }
   }
 }

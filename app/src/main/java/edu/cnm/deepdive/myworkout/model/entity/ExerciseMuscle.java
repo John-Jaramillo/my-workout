@@ -11,9 +11,9 @@ import androidx.room.PrimaryKey;
         @Index(value = {"exercise_id"}, unique = true)
     },
     foreignKeys = {
-        @ForeignKey(entity = User.class, parentColumns = {"exercise_id"}, childColumns = {"exercise_id"},
+        @ForeignKey(entity = Exercise.class, parentColumns = {"exercise_id"}, childColumns = {"exercise_id"},
             onDelete = ForeignKey.CASCADE),
-        @ForeignKey(entity = Exercise.class, parentColumns = {"muscle_id"}, childColumns = {"muscle_id"},
+        @ForeignKey(entity = Muscle.class, parentColumns = {"muscle_id"}, childColumns = {"muscle_id"},
             onDelete = ForeignKey.CASCADE)
     }
 )

@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
+import androidx.room.TypeConverter;
+import edu.cnm.deepdive.myworkout.model.entity.Exercise.ExerciseType;
 
 @Entity
 public class Muscle {
@@ -16,6 +18,7 @@ public class Muscle {
   private String name;
 
   @NonNull
+  @ColumnInfo(index = true)
   private Area area;
 
 
@@ -45,9 +48,19 @@ public class Muscle {
     this.area = area;
   }
 
-  private enum Area {
+  public enum Area {
     CHEST, UPPER_BACK, LOWER_BACK, UPPER_ARM, LOWER_ARM, ABS, SHOULDERS,
-        NECK, UPPER_LEG, LOWER_LEG
+        NECK, UPPER_LEG, LOWER_LEG;
+
+    @TypeConverter
+    public static Integer areaToInteger(Area value) {
+      return (value != null) ? value.ordinal() : null;
+    }
+
+    @TypeConverter
+    public static Area integerToArea(Integer value) {
+      return (value != null) ? Area.values()[value] : null;
+    }
   }
   
 }
