@@ -28,9 +28,7 @@ public class Routine {
 
   private Day day;
 
-  private enum Day {
-    SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY
-  }
+  private int order;
 
 
   public long getId() {
@@ -63,5 +61,18 @@ public class Routine {
 
   public void setDay(Day day) {
     this.day = day;
+  }
+
+  public int getOrder() {
+    return order;
+  }
+
+  public void setOrder(int order) {
+    this.order = order;
+  }
+
+
+  private enum Day {
+    SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY
   }
 }
