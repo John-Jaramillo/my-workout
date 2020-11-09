@@ -1,6 +1,6 @@
 # Entity Operations Checklist
 
-## Entity name: {Replace this placeholder with the entity class name.}
+## Entity name: User
 
 ## Operations
 

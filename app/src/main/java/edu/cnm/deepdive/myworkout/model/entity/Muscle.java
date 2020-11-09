@@ -5,7 +5,6 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import androidx.room.TypeConverter;
-import edu.cnm.deepdive.myworkout.model.entity.Exercise.ExerciseType;
 
 @Entity
 public class Muscle {

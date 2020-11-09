@@ -16,7 +16,7 @@ public class User {
   private String name;
 
   @NonNull
-  @ColumnInfo()
+  @ColumnInfo(name = "oauth_key")
   private String oauthKey;
 
   @NonNull

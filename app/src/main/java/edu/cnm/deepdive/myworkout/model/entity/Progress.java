@@ -34,17 +34,11 @@ public class Progress {
   @NonNull
   private Date date;
 
-  private Integer duration;
+  private int set;
 
-  private Float distance;
+  private int repititions;
 
-  private Integer heartrate;
-
-  private Integer sets;
-
-  private Integer repititions;
-
-  private Long weight;
+  private long weight;
 
 
   public long getId() {
@@ -80,51 +74,27 @@ public class Progress {
     this.date = date;
   }
 
-  public Integer getDuration() {
-    return duration;
+  public int getSet() {
+    return set;
   }
 
-  public void setDuration(Integer duration) {
-    this.duration = duration;
+  public void setSet(int set) {
+    this.set = set;
   }
 
-  public Float getDistance() {
-    return distance;
-  }
-
-  public void setDistance(Float distance) {
-    this.distance = distance;
-  }
-
-  public Integer getHeartrate() {
-    return heartrate;
-  }
-
-  public void setHeartrate(Integer heartrate) {
-    this.heartrate = heartrate;
-  }
-
-  public Integer getSets() {
-    return sets;
-  }
-
-  public void setSets(Integer sets) {
-    this.sets = sets;
-  }
-
-  public Integer getRepititions() {
+  public int getRepititions() {
     return repititions;
   }
 
-  public void setRepititions(Integer repititions) {
+  public void setRepititions(int repititions) {
     this.repititions = repititions;
   }
 
-  public Long getWeight() {
+  public long getWeight() {
     return weight;
   }
 
-  public void setWeight(Long weight) {
+  public void setWeight(long weight) {
     this.weight = weight;
   }
 }

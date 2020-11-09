@@ -43,5 +43,8 @@ public interface UserDao {
 
 
   @Query("SELECT * FROM User WHERE user_id = :id")
-  LiveData<User> select(long id);
+  LiveData<User> selectById(long id);
+
+  @Query("SELECT * FROM User WHERE oauth_key = :oauthKey")
+  Single<User> selectByOauthKey(String oauthKey);
 }

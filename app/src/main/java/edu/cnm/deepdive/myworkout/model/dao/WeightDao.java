@@ -33,4 +33,7 @@ public interface WeightDao {
 
   @Query("SELECT * FROM Weight WHERE weight_id = :id")
   LiveData<Weight> select(long id);
+
+  @Query("SELECT * FROM Weight WHERE user_id = :id ORDER BY date ASC")
+  LiveData<Weight> selectWeightByDate(long id);
 }

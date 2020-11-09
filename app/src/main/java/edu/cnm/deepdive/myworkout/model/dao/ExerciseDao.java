@@ -44,4 +44,5 @@ public interface ExerciseDao {
 
   @Query("SELECT * FROM Exercise WHERE exercise_id = :id")
   LiveData<Exercise> select(long id);
+
 }

@@ -44,4 +44,10 @@ public interface MuscleDao {
 
   @Query("SELECT * FROM Muscle WHERE muscle_id = :id")
   LiveData<Muscle> select(long id);
+
+  @Query("SELECT * FROM Muscle WHERE name = :name")
+  LiveData<Muscle> selectByName(String name);
+
+//  @Query("SELECT * FROM Muscle WHERE area = :area")
+//  LiveData<Muscle> selectByArea(Enum area);
 }

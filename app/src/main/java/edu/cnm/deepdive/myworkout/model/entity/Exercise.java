@@ -17,10 +17,6 @@ public class Exercise {
   private String name;
 
   @NonNull
-  @ColumnInfo(name = "exercise_type", index = true)
-  private ExerciseType exerciseType;
-
-  @NonNull
   private String description;
 
 
@@ -42,15 +38,6 @@ public class Exercise {
   }
 
   @NonNull
-  public ExerciseType getExerciseType() {
-    return exerciseType;
-  }
-
-  public void setExerciseType(@NonNull ExerciseType exerciseType) {
-    this.exerciseType = exerciseType;
-  }
-
-  @NonNull
   public String getDescription() {
     return description;
   }
@@ -59,17 +46,4 @@ public class Exercise {
     this.description = description;
   }
 
-  public enum ExerciseType {
-    AEROBIC, STRENGTH;
-
-    @TypeConverter
-    public static Integer exerciseTypeToInteger(ExerciseType value) {
-      return (value != null) ? value.ordinal() : null;
-    }
-
-    @TypeConverter
-    public static ExerciseType integerToExerciseType(Integer value) {
-      return (value != null) ? ExerciseType.values()[value] : null;
-    }
-  }
 }
