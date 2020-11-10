@@ -75,6 +75,13 @@ After logging in:
 ## Entity Classes
 
 * [Exercise](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/entity/Exercise.java)
+* [ExerciseMuscle](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/entity/ExerciseMuscle.java)
+* [Muscle](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/entity/Muscle.java)
+* [Progress](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/entity/Progress.java)
+* [Routine](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/entity/Routine.java)
+* [User](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/entity/User.java)
+* [Weight](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/entity/Weight.java)
+
 
 
 
