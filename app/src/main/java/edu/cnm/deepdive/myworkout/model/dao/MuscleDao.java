@@ -48,6 +48,9 @@ public interface MuscleDao {
   @Query("SELECT * FROM Muscle WHERE name = :name")
   LiveData<Muscle> selectByName(String name);
 
-//  @Query("SELECT * FROM Muscle WHERE area = :area")
-//  LiveData<Muscle> selectByArea(Enum area);
+  @Query("SELECT * FROM Muscle ORDER BY area, name")
+  LiveData<List<Muscle>> selectAllOrderByArea();
+
+  @Query("SELECT * FROM Muscle WHERE area = :area ORDER BY name")
+  LiveData<List<Muscle>> selectMusclesByArea(Muscle.Area area);
 }

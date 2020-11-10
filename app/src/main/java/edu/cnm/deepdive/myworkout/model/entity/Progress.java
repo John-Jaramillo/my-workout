@@ -23,7 +23,7 @@ public class Progress {
 
   @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "progress_id")
-  private long Id;
+  private long id;
 
   @ColumnInfo(name = "user_id", index = true)
   private long userId;
@@ -42,11 +42,11 @@ public class Progress {
 
 
   public long getId() {
-    return Id;
+    return id;
   }
 
   public void setId(long id) {
-    Id = id;
+    this.id = id;
   }
 
   public long getUserId() {

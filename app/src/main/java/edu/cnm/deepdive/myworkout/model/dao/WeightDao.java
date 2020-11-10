@@ -5,6 +5,7 @@ import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Update;
 import edu.cnm.deepdive.myworkout.model.entity.Weight;
 import io.reactivex.Single;
 import java.util.Collection;
@@ -22,6 +23,15 @@ public interface WeightDao {
   @Insert
   Single<List<Long>> insert(Collection<Weight> weights);
 
+  @Update
+  Single<Integer> update(Weight weight);
+
+  @Update
+  Single<Integer> update(Weight... weights);
+
+  @Update
+  Single<Integer> update(Collection<Weight> weights);
+
   @Delete
   Single<Integer> delete(Weight weight);
 
@@ -35,5 +45,5 @@ public interface WeightDao {
   LiveData<Weight> select(long id);
 
   @Query("SELECT * FROM Weight WHERE user_id = :id ORDER BY date ASC")
-  LiveData<Weight> selectWeightByDate(long id);
+  LiveData<List<Weight>> selectWeightByUser(long id);
 }

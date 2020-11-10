@@ -7,6 +7,7 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 import edu.cnm.deepdive.myworkout.model.entity.Exercise;
+import edu.cnm.deepdive.myworkout.model.entity.Muscle;
 import io.reactivex.Single;
 import java.util.Collection;
 import java.util.List;
@@ -44,5 +45,15 @@ public interface ExerciseDao {
 
   @Query("SELECT * FROM Exercise WHERE exercise_id = :id")
   LiveData<Exercise> select(long id);
+
+  @Query("SELECT * FROM Exercise ORDER BY name")
+  LiveData<List<Exercise>> selectAll();
+
+  @Query("SELECT DISTINCT e.* FROM Exercise AS e "
+      + "INNER JOIN ExerciseMuscle AS em ON em.exercise_id = e.exercise_id "
+      + "INNER JOIN Muscle AS m ON m.muscle_id = em.muscle_id "
+      + "WHERE m.area = :area "
+      + "ORDER BY m.name ASC, e.name ASC")
+  LiveData<List<Exercise>> selectByMuscleArea(Muscle.Area area);
 
 }

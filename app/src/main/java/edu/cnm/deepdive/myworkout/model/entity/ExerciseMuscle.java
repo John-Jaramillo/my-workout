@@ -21,7 +21,7 @@ public class ExerciseMuscle {
 
   @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "exercise_muscle_id")
-  private long Id;
+  private long id;
 
   @ColumnInfo(name = "exercise_id")
   private long exerciseId;
@@ -33,11 +33,11 @@ public class ExerciseMuscle {
 
 
   public long getId() {
-    return Id;
+    return id;
   }
 
   public void setId(long id) {
-    Id = id;
+    this.id = id;
   }
 
   public long getExerciseId() {

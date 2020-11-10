@@ -17,7 +17,7 @@ public class Weight {
 
   @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "weight_id")
-  private long Id;
+  private long id;
 
   @ColumnInfo(name = "user_id", index = true)
   private long userId;
@@ -29,11 +29,11 @@ public class Weight {
 
 
   public long getId() {
-    return Id;
+    return id;
   }
 
   public void setId(long id) {
-    Id = id;
+    this.id = id;
   }
 
   public long getUserId() {

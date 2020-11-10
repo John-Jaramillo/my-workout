@@ -44,4 +44,7 @@ public interface ExerciseMuscleDao {
 
   @Query("SELECT * FROM ExerciseMuscle WHERE exercise_muscle_id = :id")
   LiveData<ExerciseMuscle> select(long id);
+
+  @Query("SELECT * FROM ExerciseMuscle ORDER BY muscle_id ASC, `primary`")
+  LiveData<List<ExerciseMuscle>> selectAll();
 }

@@ -44,4 +44,8 @@ public interface ProgressDao {
 
   @Query("SELECT * FROM Progress WHERE progress_id = :id")
   LiveData<Progress> select(long id);
+
+  @Query("SELECT * FROM Progress WHERE user_id = :id ORDER BY date ASC, exercise_id ASC, `set` ASC")
+  LiveData<List<Progress>> selectByUser(long id);
+
 }

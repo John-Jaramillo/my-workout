@@ -4,10 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
-import androidx.room.Index;
 import androidx.room.PrimaryKey;
 import androidx.room.TypeConverter;
-import edu.cnm.deepdive.myworkout.model.entity.Muscle.Area;
 
 @Entity(
     foreignKeys = {
@@ -21,7 +19,7 @@ public class Routine {
 
   @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "routine_id")
-  private long Id;
+  private long id;
 
   @ColumnInfo(name = "user_id", index = true)
   private long userId;
@@ -36,11 +34,11 @@ public class Routine {
 
 
   public long getId() {
-    return Id;
+    return id;
   }
 
   public void setId(long id) {
-    Id = id;
+    this.id = id;
   }
 
   public long getUserId() {

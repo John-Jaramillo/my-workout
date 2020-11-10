@@ -4,14 +4,13 @@ import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-import androidx.room.TypeConverter;
 
 @Entity
 public class Exercise {
 
   @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "exercise_id")
-  private long Id;
+  private long id;
 
   @NonNull
   private String name;
@@ -21,11 +20,11 @@ public class Exercise {
 
 
   public long getId() {
-    return Id;
+    return id;
   }
 
   public void setId(long id) {
-    Id = id;
+    this.id = id;
   }
 
   @NonNull
