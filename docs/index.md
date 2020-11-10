@@ -1,6 +1,6 @@
 ## Summary
 
-This Android app will allow a user to create an exercise routine by choosing from a list of exercises based on the equipment the user has available. The list will include aerobic and resistance based exercises. The user then can keep track of their progress by entering information into an exercise log. The aerobic exercises will track time, distance and heart rate. The resistance exercises will track sets, repetitions, and weight. 
+This Android app will allow a user to create an exercise routine by choosing from a list of weight training exercises. The user then can keep track of their progress by entering information into an exercise log. The app will allow the user to track sets, repetitions, and weight for each exercise. 
 
 ## Intended users
 
@@ -10,11 +10,17 @@ This Android app will allow a user to create an exercise routine by choosing fro
 
 * People who are weight lifting and want an easy way to track their progress.
 
-    > As someone with a full time job and a family, I want a faster and easier way to track my progress using my phone instead of a notebook so I can devote more time to other aspects of my life.
+    > As someone with a full time job and a family, I want a faster and easier way to track my progress using my phone instead of writing in a notebook so I can devote more time to other aspects of my life.
 
 ## Functionality
 
-* User can create an exercise routine for aerobic training, resistance training, or both by picking from a list of exercises.
+Without having to log in:
+
+* User will be able to browse the exercises.
+
+After logging in:
+
+* User can create an exercise routine by picking from a list of exercises.
 
 * User will be able to enter information as they complete each exercise.
 
@@ -26,15 +32,11 @@ This Android app will allow a user to create an exercise routine by choosing fro
 
 * List of exercises.
     
-    * If resistance exercise, muscle groups used (main and secondary).
-    
-    * Equipment needed for each exercise.
+* List of Muscles.
 
 * List of exercises in user's routine, both current and past.
 
-    * For aerobic exercises: time, distance, heart rate.
-
-    * For resistance training: sets, repetitions, weight.
+* User progress: exercise, date, sets, repetitions, weight.
     
 ## Device/external services
 
@@ -44,8 +46,15 @@ This Android app will allow a user to create an exercise routine by choosing fro
 
     * Access to these services would be during development to download the exercise information and store it in a SQL database. This would only require access to the service once. The wger database seems to have more information on each exercise but when I tried to browse the API I got what looked like test data so I'm not sure if I wasn't doing it right or if the API isn't usable.
 
+* Access to google sign-in.
+    * <https://developers.google.com/identity/sign-in/web/sign-in>
+    * Creating/editing a workout and entering/viewing tracking data will only be available if the user is logged in.
+    * The app will still run without the user logging in but with limited functionality.
+
 * Access to the calendar for workout scheduling.
+    * <https://developer.android.com/reference/java/util/Calendar>
     * This app will access the calendar to determine which workout is scheduled for that day. The user will be able to pick a workout in case the calendar is unavailable or if they just want to do another routine that day.
+    * The app will still run but the user will need to manually pick the routine as the app won't know what day to use.
 
 ## Stretch goals/possible enhancements 
 
