@@ -64,11 +64,17 @@ After logging in:
 
 * User will be able to input exercises not on the list.
 
+* Add aerobic exercises to create workout.
+
 * Recommend exercise routines based on the user's goal (weight loss, strength, endurance, etc.) and fitness level (sedentary, mildly active, etc.).
 
 ## [Wireframe](wireframe.md)
 
 ## [ERD](erd.md)
+
+## Entity Classes
+
+* [Exercise](..\app\src\main\java\edu\cnm\deepdive\myworkout\model\entity\Exercise.java)
 
 
 
