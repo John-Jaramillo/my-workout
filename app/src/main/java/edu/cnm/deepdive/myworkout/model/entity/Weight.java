@@ -25,6 +25,7 @@ public class Weight {
   private long weight;
 
   @NonNull
+  @ColumnInfo(index = true)
   private Date date;
 
 
