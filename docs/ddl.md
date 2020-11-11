@@ -90,4 +90,4 @@ CREATE INDEX IF NOT EXISTS `index_Weight_date` ON `Weight` (`date`);
 
 ```
 
-[ddl](sql/ddl.sql)
+[ddl.sql file](https://github.com/John-Jaramillo/my-workout/blob/master/docs/sql/ddl.sql)
