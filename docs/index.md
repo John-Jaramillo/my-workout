@@ -76,7 +76,7 @@ After logging in:
 
 ## Entity Classes
 
-* [Exercise](Exercise.java)
+* [Exercise](../../app/src/main/java/edu/cnm/deepdive/myworkout/model/entity/Exercise.javaExercise.java)
 * [Exercise](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/entity/Exercise.java)
 * [ExerciseMuscle](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/entity/ExerciseMuscle.java)
 * [Muscle](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/entity/Muscle.java)
