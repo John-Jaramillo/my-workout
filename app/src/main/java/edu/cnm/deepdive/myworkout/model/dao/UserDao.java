@@ -46,5 +46,8 @@ public interface UserDao {
   LiveData<User> selectById(long id);
 
   @Query("SELECT * FROM User WHERE oauth_key = :oauthKey")
-  Single<User> selectByOauthKey(String oauthKey);
+  LiveData<User> selectByOauthKey(String oauthKey);
+
+  @Query("SELECT * FROM User ORDER BY user_id")
+  LiveData<List<User>> selectAll();
 }

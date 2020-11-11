@@ -2,12 +2,16 @@ package edu.cnm.deepdive.myworkout.model.service;
 
 import android.content.Context;
 import androidx.annotation.NonNull;
+import androidx.lifecycle.LiveData;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import edu.cnm.deepdive.myworkout.model.dao.UserDao;
+import edu.cnm.deepdive.myworkout.model.entity.Progress;
 import edu.cnm.deepdive.myworkout.model.entity.User;
+import io.reactivex.Completable;
 import io.reactivex.Single;
 import io.reactivex.schedulers.Schedulers;
 import java.util.Date;
+import java.util.List;
 
 public class UserRepository {
 
@@ -38,5 +42,23 @@ public class UserRepository {
                 })
         )
         .subscribeOn(Schedulers.io());
+  }
+
+  public Completable delete(User user) {
+    return (user.getId() == 0)
+        ? Completable.complete()
+        : userDao.delete(user).ignoreElement();
+  }
+
+  public LiveData<User> getUserById(long userId) {
+    return userDao.selectById(userId);
+  }
+
+  public LiveData<User> getUserByOauthKey(String oauthKey) {
+    return userDao.selectByOauthKey(oauthKey);
+  }
+
+  public LiveData<List<User>> getAll() {
+    return userDao.selectAll();
   }
 }

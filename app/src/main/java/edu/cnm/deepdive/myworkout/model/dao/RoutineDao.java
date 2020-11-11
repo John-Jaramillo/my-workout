@@ -47,4 +47,7 @@ public interface RoutineDao {
 
   @Query("SELECT * FROM Routine WHERE user_id = :id ORDER BY day ASC, `order` ASC")
   LiveData<List<Routine>> selectByUserId(long id);
+
+  @Query("SELECT * FROM Routine ORDER BY user_id ASC, day ASC, `order` ASC")
+  LiveData<List<Routine>> selectAll();
 }

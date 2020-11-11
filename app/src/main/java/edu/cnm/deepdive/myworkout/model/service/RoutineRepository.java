@@ -39,4 +39,8 @@ public class RoutineRepository {
   public LiveData<List<Routine>> getRoutinesByUser(long userId) {
     return routineDao.selectByUserId(userId);
   }
+
+  public LiveData<List<Routine>> getAll() {
+    return routineDao.selectAll();
+  }
 }

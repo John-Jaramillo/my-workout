@@ -36,4 +36,8 @@ public class WeightRepository {
   public LiveData<List<Weight>> getWeightByUser(long user) {
     return weightDao.selectWeightByUser(user);
   }
+
+  public LiveData<List<Weight>> getAll() {
+    return weightDao.selectAll();
+  }
 }

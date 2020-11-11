@@ -36,4 +36,8 @@ public class ProgressRepository {
   public LiveData<List<Progress>> getProgressByUser(long userId) {
     return progressDao.selectByUser(userId);
   }
+
+  public LiveData<List<Progress>> getAll() {
+    return progressDao.selectAll();
+  }
 }
