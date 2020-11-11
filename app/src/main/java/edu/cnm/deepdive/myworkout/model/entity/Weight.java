@@ -22,7 +22,7 @@ public class Weight {
   @ColumnInfo(name = "user_id", index = true)
   private long userId;
 
-  private float weight;
+  private long weight;
 
   @NonNull
   private Date date;
@@ -44,11 +44,11 @@ public class Weight {
     this.userId = userId;
   }
 
-  public float getWeight() {
+  public long getWeight() {
     return weight;
   }
 
-  public void setWeight(float weight) {
+  public void setWeight(long weight) {
     this.weight = weight;
   }
 

@@ -3,13 +3,9 @@ package edu.cnm.deepdive.myworkout.model.entity;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
-import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
 @Entity(
-    indices = {
-        @Index(value = {"exercise_id"}, unique = true)
-    },
     foreignKeys = {
         @ForeignKey(entity = Exercise.class, parentColumns = {"exercise_id"}, childColumns = {"exercise_id"},
             onDelete = ForeignKey.CASCADE),
@@ -23,7 +19,7 @@ public class ExerciseMuscle {
   @ColumnInfo(name = "exercise_muscle_id")
   private long id;
 
-  @ColumnInfo(name = "exercise_id")
+  @ColumnInfo(name = "exercise_id", index = true)
   private long exerciseId;
 
   @ColumnInfo(name = "muscle_id", index = true)

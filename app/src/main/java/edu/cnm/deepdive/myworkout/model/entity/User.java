@@ -3,9 +3,14 @@ package edu.cnm.deepdive.myworkout.model.entity;
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
-@Entity
+@Entity(
+    indices = {
+        @Index(value = {"oauth_key"}, unique = true)
+    }
+)
 public class User {
 
   @PrimaryKey(autoGenerate = true)
@@ -19,7 +24,6 @@ public class User {
   @ColumnInfo(name = "oauth_key")
   private String oauthKey;
 
-  @NonNull
   private Long height;
 
 
@@ -49,12 +53,11 @@ public class User {
     this.oauthKey = oauthKey;
   }
 
-  @NonNull
   public Long getHeight() {
     return height;
   }
 
-  public void setHeight(@NonNull Long height) {
+  public void setHeight(Long height) {
     this.height = height;
   }
 }

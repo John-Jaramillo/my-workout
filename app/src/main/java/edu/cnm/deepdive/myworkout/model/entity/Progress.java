@@ -9,9 +9,6 @@ import io.reactivex.annotations.NonNull;
 import java.util.Date;
 
 @Entity(
-    indices = {
-        @Index(value = {"date"}, unique = true)
-    },
     foreignKeys = {
         @ForeignKey(entity = User.class, parentColumns = {"user_id"}, childColumns = {"user_id"},
             onDelete = ForeignKey.CASCADE),
@@ -32,6 +29,7 @@ public class Progress {
   private long exerciseId;
 
   @NonNull
+  @ColumnInfo(index = true)
   private Date date;
 
   private int set;
