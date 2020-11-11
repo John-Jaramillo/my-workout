@@ -68,12 +68,15 @@ After logging in:
 
 * Recommend exercise routines based on the user's goal (weight loss, strength, endurance, etc.) and fitness level (sedentary, mildly active, etc.).
 
-## [Wireframe](wireframe.md)
+## Wireframe 
+[Wireframe](wireframe.md)
 
-## [ERD](erd.md)
+## ERD
+[ERD](erd.md)
 
 ## Entity Classes
 
+* [Exercise](Exercise.java)
 * [Exercise](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/entity/Exercise.java)
 * [ExerciseMuscle](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/entity/ExerciseMuscle.java)
 * [Muscle](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/entity/Muscle.java)
