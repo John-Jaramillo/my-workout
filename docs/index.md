@@ -82,6 +82,14 @@ After logging in:
 * [User](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/entity/User.java)
 * [Weight](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/entity/Weight.java)
 
+## DAO interfaces
 
+* [ExerciseDao](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/dao/ExerciseDao.java)
+* [ExerciseMuscleDao](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/dao/ExerciseMuscleDao.java)
+* [MuscleDao](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/dao/MuscleDao.java)
+* [ProgressDao](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/dao/ProgressDao.java)
+* [RoutineDao](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/dao/RoutineDao.java)
+* [UserDao](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/dao/UserDao.java)
+* [WeightDao](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/dao/WeightDao.java)
 
 
