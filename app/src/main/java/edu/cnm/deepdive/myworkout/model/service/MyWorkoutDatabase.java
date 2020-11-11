@@ -28,7 +28,6 @@ import java.util.Date;
     version = 1,
     exportSchema = true
 )
-
 @TypeConverters({Converters.class, Muscle.Area.class, Routine.Day.class})
 public abstract class MyWorkoutDatabase extends RoomDatabase {
 
