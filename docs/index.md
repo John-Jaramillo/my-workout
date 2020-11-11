@@ -105,3 +105,7 @@ After logging in:
 * [RoutineRepository](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/service/RoutineRepository.java)
 * [UserRepository](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/service/UserRepository.java)
 * [WeightRepository](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/service/WeightRepository.java)
+
+## DDL
+
+* [ddl](ddl.md)
