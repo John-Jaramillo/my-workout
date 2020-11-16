@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.myworkout.model.service;
+package edu.cnm.deepdive.myworkout.service;
 
 import android.app.Application;
 import androidx.room.Database;
@@ -20,7 +20,7 @@ import edu.cnm.deepdive.myworkout.model.entity.Progress;
 import edu.cnm.deepdive.myworkout.model.entity.Routine;
 import edu.cnm.deepdive.myworkout.model.entity.User;
 import edu.cnm.deepdive.myworkout.model.entity.Weight;
-import edu.cnm.deepdive.myworkout.model.service.MyWorkoutDatabase.Converters;
+import edu.cnm.deepdive.myworkout.service.MyWorkoutDatabase.Converters;
 import java.util.Date;
 
 @Database(entities = {Exercise.class, ExerciseMuscle.class, Muscle.class, Progress.class,

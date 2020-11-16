@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.myworkout.model.service;
+package edu.cnm.deepdive.myworkout.service;
 
 import android.app.Activity;
 import android.app.Application;
@@ -9,7 +9,6 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
-import edu.cnm.deepdive.myworkout.BuildConfig;
 import io.reactivex.Single;
 
 public class GoogleSignInService {

@@ -1,16 +1,14 @@
-package edu.cnm.deepdive.myworkout.model.service;
+package edu.cnm.deepdive.myworkout.service;
 
 import android.content.Context;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import edu.cnm.deepdive.myworkout.model.dao.UserDao;
-import edu.cnm.deepdive.myworkout.model.entity.Progress;
 import edu.cnm.deepdive.myworkout.model.entity.User;
 import io.reactivex.Completable;
 import io.reactivex.Single;
 import io.reactivex.schedulers.Schedulers;
-import java.util.Date;
 import java.util.List;
 
 public class UserRepository {

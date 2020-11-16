@@ -1,11 +1,8 @@
-package edu.cnm.deepdive.myworkout.model.service;
+package edu.cnm.deepdive.myworkout.service;
 
 import android.content.Context;
 import androidx.lifecycle.LiveData;
-import edu.cnm.deepdive.myworkout.model.dao.ExerciseDao;
 import edu.cnm.deepdive.myworkout.model.dao.RoutineDao;
-import edu.cnm.deepdive.myworkout.model.entity.Exercise;
-import edu.cnm.deepdive.myworkout.model.entity.Muscle;
 import edu.cnm.deepdive.myworkout.model.entity.Routine;
 import io.reactivex.Completable;
 import java.util.List;

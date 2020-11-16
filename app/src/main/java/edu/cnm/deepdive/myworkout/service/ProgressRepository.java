@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.myworkout.model.service;
+package edu.cnm.deepdive.myworkout.service;
 
 import android.content.Context;
 import androidx.lifecycle.LiveData;

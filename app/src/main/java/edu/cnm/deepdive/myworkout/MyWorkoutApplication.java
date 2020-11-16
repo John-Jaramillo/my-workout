@@ -2,7 +2,7 @@ package edu.cnm.deepdive.myworkout;
 
 import android.app.Application;
 import com.facebook.stetho.Stetho;
-import edu.cnm.deepdive.myworkout.model.service.MyWorkoutDatabase;
+import edu.cnm.deepdive.myworkout.service.MyWorkoutDatabase;
 import io.reactivex.schedulers.Schedulers;
 
 public class MyWorkoutApplication extends Application {
