@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.myworkout.controller.ui.slideshow;
+package edu.cnm.deepdive.myworkout.controller.ui.profile;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,17 +12,17 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import edu.cnm.deepdive.myworkout.R;
 
-public class SlideshowFragment extends Fragment {
+public class ProfileFragment extends Fragment {
 
-  private SlideshowViewModel slideshowViewModel;
+  private ProfileViewModel profileViewModel;
 
   public View onCreateView(@NonNull LayoutInflater inflater,
       ViewGroup container, Bundle savedInstanceState) {
-    slideshowViewModel =
-        new ViewModelProvider(this).get(SlideshowViewModel.class);
-    View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
-    final TextView textView = root.findViewById(R.id.text_slideshow);
-    slideshowViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+    profileViewModel =
+        new ViewModelProvider(this).get(ProfileViewModel.class);
+    View root = inflater.inflate(R.layout.fragment_profile, container, false);
+    final TextView textView = root.findViewById(R.id.text_gallery);
+    profileViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
       @Override
       public void onChanged(@Nullable String s) {
         textView.setText(s);

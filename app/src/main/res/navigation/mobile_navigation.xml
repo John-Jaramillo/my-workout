@@ -12,14 +12,35 @@
     tools:layout="@layout/fragment_home"/>
 
   <fragment
-    android:id="@+id/nav_gallery"
-    android:label="@string/menu_gallery"
-    android:name="edu.cnm.deepdive.myworkout.controller.ui.gallery.GalleryFragment"
-    tools:layout="@layout/fragment_gallery"/>
+    android:id="@+id/nav_profile"
+    android:label="@string/menu_profile"
+    android:name="edu.cnm.deepdive.myworkout.controller.ui.profile.ProfileFragment"
+    tools:layout="@layout/fragment_profile"/>
 
   <fragment
-    android:id="@+id/nav_slideshow"
-    android:label="@string/menu_slideshow"
-    android:name="edu.cnm.deepdive.myworkout.controller.ui.slideshow.SlideshowFragment"
-    tools:layout="@layout/fragment_slideshow"/>
+    android:id="@+id/nav_log"
+    android:label="@string/menu_log"
+    android:name="edu.cnm.deepdive.myworkout.controller.ui.log.LogFragment"
+    tools:layout="@layout/fragment_log"/>
+
+  <fragment
+    android:id="@+id/nav_routine"
+    android:label="@string/menu_routine"
+    android:name="edu.cnm.deepdive.myworkout.controller.ui.routine.RoutineFragment"
+    tools:layout="@layout/fragment_routine"/>
+
+  <fragment
+    android:id="@+id/nav_exercises"
+    android:label="@string/menu_exercises"
+    android:name="edu.cnm.deepdive.myworkout.controller.ui.exercises.ExercisesFragment"
+    tools:layout="@layout/fragment_exercises"/>
+
+  <fragment
+    android:id="@+id/nav_muscles"
+    android:label="@string/menu_muscles"
+    android:name="edu.cnm.deepdive.myworkout.controller.ui.muscles.MusclesFragment"
+    tools:layout="@layout/fragment_muscles"/>
+
+
+
 </navigation>

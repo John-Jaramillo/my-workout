@@ -1,16 +1,16 @@
-package edu.cnm.deepdive.myworkout.controller.ui.gallery;
+package edu.cnm.deepdive.myworkout.controller.ui.log;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class GalleryViewModel extends ViewModel {
+public class LogViewModel extends ViewModel {
 
   private MutableLiveData<String> mText;
 
-  public GalleryViewModel() {
+  public LogViewModel() {
     mText = new MutableLiveData<>();
-    mText.setValue("This is gallery fragment");
+    mText.setValue("This is log fragment");
   }
 
   public LiveData<String> getText() {
