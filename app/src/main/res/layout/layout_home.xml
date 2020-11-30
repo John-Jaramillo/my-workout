@@ -7,6 +7,29 @@
   android:layout_height="match_parent"
   tools:context=".controller.LoginActivity">
 
+  <ImageView
+    android:id="@+id/picture"
+    android:contentDescription="main picture"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/main_pic"
+    android:adjustViewBounds="true"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+  <TextView
+    android:id="@+id/title"
+    android:text="MY WORKOUT"
+    android:textStyle="bold"
+    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+    android:textAlignment="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/picture"/>
+
   <com.google.android.gms.common.SignInButton
     android:id="@+id/sign_in"
     android:layout_width="match_parent"
@@ -14,34 +37,37 @@
     android:padding="@dimen/half_margin"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintBottom_toTopOf="@id/progress"
+    app:layout_constraintTop_toBottomOf="@id/picture"
+    app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintVertical_bias="0.4"/>
 
   <Button
-    android:id="@+id/progress"
+    android:id="@+id/log"
+    android:text="Log Book"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="@dimen/half_margin"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toBottomOf="@id/sign_in"
-    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/settings"
     app:layout_constraintVertical_bias="0.4"/>
 
   <Button
     android:id="@+id/settings"
+    android:text="Settings"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="@dimen/half_margin"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/progress"
+    app:layout_constraintTop_toBottomOf="@id/log"
     app:layout_constraintBottom_toTopOf="@id/exit"
     app:layout_constraintVertical_bias="0.4"/>
 
   <Button
     android:id="@+id/exit"
+    android:text="Exit"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="@dimen/half_margin"

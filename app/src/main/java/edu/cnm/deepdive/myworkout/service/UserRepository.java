@@ -8,8 +8,11 @@ import edu.cnm.deepdive.myworkout.model.dao.UserDao;
 import edu.cnm.deepdive.myworkout.model.entity.User;
 import io.reactivex.Completable;
 import io.reactivex.Single;
+import io.reactivex.SingleObserver;
+import io.reactivex.SingleSource;
 import io.reactivex.schedulers.Schedulers;
 import java.util.List;
+import org.jetbrains.annotations.NotNull;
 
 public class UserRepository {
 
@@ -23,22 +26,19 @@ public class UserRepository {
     signInService = GoogleSignInService.getInstance();
   }
 
-  public Single<User> createUser(@NonNull GoogleSignInAccount account) {
-    return Single.fromCallable(() -> {
-      User user = new User();
-      user.setName(account.getDisplayName());
-      user.setOauthKey(account.getId());
-      return user;
-    })
-        .flatMap((user) ->
+  public Single<User> getOrCreate(@NonNull GoogleSignInAccount account) {
+    return userDao.selectByOauthKey(account.getId())
+        .switchIfEmpty((SingleSource<User>) observer -> {
+            User user = new User();
+            user.setName(account.getDisplayName());
+            user.setOauthKey(account.getId());
             userDao.insert(user)
                 .map((id) -> {
-                  if (id > 0) {
-                    user.setId(id);
-                  }
+                  user.setId(id);
                   return user;
                 })
-        )
+                .subscribe(observer);
+        })
         .subscribeOn(Schedulers.io());
   }
 
@@ -50,10 +50,6 @@ public class UserRepository {
 
   public LiveData<User> getUserById(long userId) {
     return userDao.selectById(userId);
-  }
-
-  public LiveData<User> getUserByOauthKey(String oauthKey) {
-    return userDao.selectByOauthKey(oauthKey);
   }
 
   public LiveData<List<User>> getAll() {

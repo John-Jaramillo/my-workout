@@ -7,6 +7,7 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 import edu.cnm.deepdive.myworkout.model.entity.User;
+import io.reactivex.Maybe;
 import io.reactivex.Single;
 import java.util.Collection;
 import java.util.List;
@@ -46,7 +47,7 @@ public interface UserDao {
   LiveData<User> selectById(long id);
 
   @Query("SELECT * FROM User WHERE oauth_key = :oauthKey")
-  LiveData<User> selectByOauthKey(String oauthKey);
+  Maybe<User> selectByOauthKey(String oauthKey);
 
   @Query("SELECT * FROM User ORDER BY user_id")
   LiveData<List<User>> selectAll();
