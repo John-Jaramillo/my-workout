@@ -24,11 +24,10 @@
   <string name="menu_routine">Routine</string>
 
   <string name="exercises_title">EXERCISES</string>
-
   <string name="muscles_title">MUSCLES</string>
 
   <string name="chest_prompt">CHEST</string>
-  <string name="muscles_front_prompt">Front Muscles</string>
+  <string name="muscles_prompt">Muscles</string>
 
   <string-array name="muscles_anterior_array">
     <item>Anterior Deltoid</item>

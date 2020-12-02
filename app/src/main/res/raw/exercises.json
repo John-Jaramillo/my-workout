@@ -1,0 +1,116 @@
+{
+    "muscles": [
+        {
+            "name": "Pectoralis Major",
+            "area": "Chest",
+            "front": true,
+            "drawable": "primary_pectoralis_major"
+        },
+        {
+            "name": "Anterior Deltoid",
+            "area": "Arms",
+            "front": true,
+            "drawable": "primary_deltoid"
+        }
+    ],
+    "exercises": [
+        {
+            "name": "Bench Press",
+            "description": "Lie on a flat bench with your feet flat on the floor. Barbell should be above your eyes. Grasp the barbell with hands slightly more than shoulder length apart. Lift the barbell off the supports and move to above your shoulders. Lower the weight towards your sternum (the plane of motion is not straight up and down), until your elbows reach the same plane as your body. Going below this reduces stress on your pecs and increases stress on your shoulder joint. Pinching your shoulder blades together will help stabilize your shoulders. Push weight up to starting position.",
+            "primary muscles": ["Pectoralis Major"],
+            "secondary muscles": ["Deltoid", "Triceps Brachii"]
+        },
+
+        {
+            "name": "Chest Dips",
+            "description": "Position yourself on dipping bars. Lower your head and hunch forward. While maintaining the hunched over position, lower yourself until you feel the stretch in your chest. Your elbows should be out to the sides. Lift yourself up to the starting position. Straightening your body during this exercise will shift the stress from your chest to your triceps.",
+            "primary muscles": ["Pectoralis Major"],
+            "secondary muscles": ["Triceps Brachii"]
+        },
+
+        {
+            "name": "Bicep Curls with Dumbbells",
+            "description": "Hold dumbbells at your sides with palms facing inward. Keeping your elbows in position, bring the weight up. Rotate your hands 90 degrees during the beginning of the movement so they are facing up. As you reach the end of the movement give your hands a little bit more twist. Reverse the process on the way down.",
+            "primary muscles": ["Biceps Brachii"],
+            "secondary muscles": ["Brachialis"]
+        },
+
+        {
+            "name": "Crunch",
+            "description": "Lie on floor with your knees bent and feet flat on floor. Your hands should be behind your head or at the sides of your head with elbows out. Raise your shoulders and upper back about 30 degrees off the floor. Squeeze your abs at the top of the movement and hold one second. Return to starting position. Do not pull your head up with your hands. This causes stress on your neck.",
+            "primary muscles": ["Rectus Abdominis"],
+            "secondary muscles": ["Obliquus Externus Abdominis"]
+        },
+
+        {
+            "name": "Squat",
+            "description": "Get underneath the bar and place it across your trapezius. Lift it off the squat rack and step back to clear the rack. Place your feet slightly more than shoulder length apart with your toes stightly pointed outward. Keeping your head up and back straight, bend your knees and lower yourself until your thighs are parallel to the floor. Knees should be over your feet and not pinched inward or outward. Push yourself back up to starting position. Bending forward will put added pressure on your lower back and could very easily lead to injury.",
+            "primary muscles": ["Quadriceps Femoris"],
+            "secondary muscles": ["Biceps Femoris", "Gluteus Maximus"]
+        },
+
+        {
+            "name": "Leg Curls",
+            "description": "Lie face down on a leg curl machine. Drop your chest down flat against the bench but keep your head up. Hook your feet under the leg curl bar and with your back slightly arched, pull your feet back towards you as high as they will go. Reverse to starting position. Make sure you keep your pelvis down against the machine during the exercise.",
+            "primary muscles": ["Biceps Femoris"],
+            "secondary muscles": ["Gluteus Maximus", "Gastrocnemius"]
+        },
+
+        {
+            "name": "Bent Over Dumbbell Row",
+            "description": "Pick up one dumbbell. Place your feet about 6 inches apart. Place one hand on a bench or chair for support, bend your knees and bend over until your back is parallel to floor. Start with your hand and the dumbbell at a 45 degree angle and positioned over the foot opposite the hand you are holding it with. You should feel a stretch in your lats. Pull the dumbbell across your body until your elbow is in line with your hips. Keep your elbow close to your body and your palm facing in and finish the movement by pulling your shoulder back and pulling your shoulder blade in towards your spine. Reverse movement to starting position.",
+            "primary muscles": ["Latissimus Dorsi", "Trapezius"],
+            "secondary muscles": ["Deltoid"]
+        },
+
+        {
+            "name": "Calf Raises",
+            "description": "Stand with your feet flat on the floor. Using a dumbbell or kettlebell for weight, lift your heels off the floor until you are standing on the balls of your feet. Lower your heels to starting position",
+            "primary muscles": ["Gastrocnemius", "Soleus"],
+            "secondary muscles": []
+        },
+
+        {
+            "name": "Behind the Neck Pull Ups",
+            "description": "Grip a pull up bar with a grip wide enough that your forearms aren't parallel to each other during any part of the exercise. Pull yourself up until you touch the bar with the back of your neck. Lower yourself to the starting position.",
+            "primary muscles": ["Latissimus Dorsi"],
+            "secondary muscles": ["Biceps Brachii", "Trapezius"]
+        },
+
+        {
+            "name": "Lateral Deltoid Flys",
+            "description": "Hold two dumbbells at your side with your palms facing in. Lift the weights out to the side up to shoulder level. At the top of the movement, rotate your shoulders forward so your elbows are raised slightly and the front of the dumbbells are slightly lower than the back. Lower weights to starting position.",
+            "primary muscles": ["Deltoid"],
+            "secondary muscles": ["Trapezius"]
+        },
+
+        {
+            "name": "Anterior Deltoid Flys",
+            "description": "Hold a dumbbell in each hand in front of you with your palms facing you. Keeping your arms parallel, lift the weights up in front of you up to shoulder level. At the top of the movement, rotate your shoulders so the inside plates of the dumbbells are slightly lower than the outside plates. Lower weights to starting position.",
+            "primary muscles": ["Deltoid"],
+            "secondary muscles": ["Trapezius"]
+        },
+
+        {
+            "name": "Posterior Deltoid Flys",
+            "description": "Hold a dumbbell in each hand and bend over at the waist until your torso is parallel to the floor and your hands are hanging down in front of you. Keeping your elbows slightly bent, lift the weights so they end up in line with your ears. Rotate your shoulders so the front of the dumbbells are slightly higher than the back. Lower weights to starting position.",
+            "primary muscles": ["Deltoid"],
+            "secondary muscles": ["Trapezius"]
+        },
+
+        {
+            "name": "Upright Row",
+            "description": "Hold a barbell or pully bar in front of your with your hands touching each other and your palms facing down. Keeping the bar close to your body, pull straight up until your arms are shoulder level. Hold for a second then lower bar to starting position",
+            "primary muscles": ["Deltoid"],
+            "secondary muscles": ["Trapezius", "Triceps Brachii"]
+        },
+
+        {
+            "name": "Hyperextensions",
+            "description": "Lie face down hanging over the edge of a hyperextension bench or on a regular bench or table with someone holding your ankles down. Put your hands behind or to the sides of your head. Keeping your head and shoulders arched backward, straighten your upper body until parallel to the floor. Do not go higher than horizontal. Lower your torso to starting position.",
+            "primary muscles": ["Spinal Erectors"],
+            "secondary muscles": []
+        }
+
+    ]
+}

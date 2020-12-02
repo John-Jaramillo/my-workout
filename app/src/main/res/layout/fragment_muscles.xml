@@ -8,7 +8,7 @@
   tools:context=".controller.ui.muscles.MusclesFragment">
 
   <TextView
-    android:id="@+id/muscles"
+    android:id="@+id/muscles_title"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="@string/muscles_title"
@@ -27,7 +27,7 @@
     android:padding="@dimen/half_margin"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toStartOf="@id/back"
-    app:layout_constraintTop_toBottomOf="@id/muscles"/>
+    app:layout_constraintTop_toBottomOf="@id/muscles_title"/>
 
   <Button
     android:id="@+id/back"
@@ -37,21 +37,21 @@
     android:padding="@dimen/half_margin"
     app:layout_constraintStart_toEndOf="@id/front"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/muscles"/>
+    app:layout_constraintTop_toBottomOf="@id/muscles_title"/>
 
   <Spinner
-    android:id="@+id/muscles_back_spinner"
-    android:layout_width="match_parent"
+    android:id="@+id/muscles_spinner"
+    android:layout_width="0dp"
     android:layout_height="wrap_content"
-    android:entries="@array/muscles_anterior_array"
-    android:prompt="@string/muscles_front_prompt"
+    android:prompt="@string/muscles_prompt"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toBottomOf="@id/front"
-    app:layout_constraintBottom_toTopOf="@id/muscles_front"/>
+    app:layout_constraintBottom_toTopOf="@id/muscles_image"
+    app:layout_constraintWidth_percent="0.5"/>
 
   <ImageView
-    android:id="@+id/muscles_front"
+    android:id="@+id/muscles_image"
     android:contentDescription="anterior view"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -68,6 +68,6 @@
     android:src="@drawable/primary_deltoid"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toTopOf="@id/muscles_front"/>
+    app:layout_constraintTop_toTopOf="@id/muscles_image"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

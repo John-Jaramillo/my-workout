@@ -44,4 +44,8 @@ public class MuscleRepository {
   public LiveData<List<Muscle>> getMusclesByArea(Muscle.Area area) {
     return muscleDao.selectMusclesByArea(area);
   }
+
+  public LiveData<List<Muscle>> getAllByFront(boolean front) {
+    return muscleDao.selectMusclesByFront(front);
+  }
 }

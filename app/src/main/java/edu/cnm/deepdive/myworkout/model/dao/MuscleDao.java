@@ -53,4 +53,7 @@ public interface MuscleDao {
 
   @Query("SELECT * FROM Muscle WHERE area = :area ORDER BY name")
   LiveData<List<Muscle>> selectMusclesByArea(Muscle.Area area);
+
+  @Query("SELECT * FROM Muscle WHERE front = :front ORDER BY name")
+  LiveData<List<Muscle>> selectMusclesByFront(boolean front);
 }

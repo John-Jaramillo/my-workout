@@ -39,7 +39,7 @@
     android:id="@+id/nav_muscles"
     android:label="@string/menu_muscles"
     android:name="edu.cnm.deepdive.myworkout.controller.ui.muscles.MusclesFragment"
-    tools:layout="@layout/fragment_muscles_front"/>
+    tools:layout="@layout/fragment_muscles"/>
 
 
 
