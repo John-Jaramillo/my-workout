@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".controller.ui.muscles.MusclesFragment">
+
+  <TextView
+    android:id="@+id/muscles"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/muscles_title"
+    android:textStyle="bold"
+    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+    android:textAlignment="center"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+  <Button
+    android:id="@+id/front"
+    android:text="FRONT"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/half_margin"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/back"
+    app:layout_constraintTop_toBottomOf="@id/muscles"/>
+
+  <Button
+    android:id="@+id/back"
+    android:text="BACK"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/half_margin"
+    app:layout_constraintStart_toEndOf="@id/front"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/muscles"/>
+
+  <Spinner
+    android:id="@+id/muscles_back_spinner"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:entries="@array/muscles_anterior_array"
+    android:prompt="@string/muscles_front_prompt"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/front"
+    app:layout_constraintBottom_toTopOf="@id/muscles_front"/>
+
+  <ImageView
+    android:id="@+id/muscles_front"
+    android:contentDescription="anterior view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/muscular_system_front"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"/>
+
+  <ImageView
+    android:id="@+id/highlighted_muscle"
+    android:contentDescription="deltoid"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/primary_deltoid"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="@id/muscles_front"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

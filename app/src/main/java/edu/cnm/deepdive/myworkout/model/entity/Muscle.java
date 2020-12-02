@@ -48,8 +48,7 @@ public class Muscle {
   }
 
   public enum Area {
-    CHEST, UPPER_BACK, LOWER_BACK, UPPER_ARM, LOWER_ARM, ABS, SHOULDERS,
-        NECK, UPPER_LEG, LOWER_LEG;
+    CHEST, UPPER_BACK, LOWER_BACK, ABS, NECK, SHOULDERS, ARMS, LOWER_BODY;
 
     @TypeConverter
     public static Integer areaToInteger(Area value) {
