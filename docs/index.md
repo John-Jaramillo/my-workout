@@ -1,6 +1,16 @@
 ## Summary
 
-This Android app will allow a user to create an exercise routine by choosing from a list of weight training exercises. The user then can keep track of their progress by entering information into an exercise log. The app will allow the user to track sets, repetitions, and weight for each exercise. 
+This Android app will allow a user to create an exercise routine by choosing from a list of weight training exercises. The user then can keep track of their progress by entering information into an exercise log. The app will allow the user to track sets, repetitions, and weight for each exercise.
+
+## Functionality
+
+After logging in:
+
+* User can create an exercise routine by picking from a list of exercises.
+
+* User will be able to enter information as they complete each exercise.
+
+* User will be able to pull up stored information so they can track their progress. 
 
 ## Current State of App
 
@@ -27,16 +37,6 @@ Currently, the app allows the user to sign in using Google Sign In and the user 
 
     > As someone with a full time job and a family, I want a faster and easier way to track my progress using my phone instead of writing in a notebook so I can devote more time to other aspects of my life.
 
-## Functionality
-
-After logging in:
-
-* User can create an exercise routine by picking from a list of exercises.
-
-* User will be able to enter information as they complete each exercise.
-
-* User will be able to pull up stored information so they can track their progress.
-
 ## Persistent data
 
 * User info (name, height, weight).
@@ -48,22 +48,6 @@ After logging in:
 * List of exercises in user's routine, both current and past.
 
 * User progress: exercise, date, sets, repetitions, weight.
-    
-## Device/external services
-
-* The API originally intended to be used for importing exercise and muscle information into the database were deemed insufficient or unusable. A JSON file was created using information gathered from the wger API, google searches, and two books.
-    * <https://wger.de/en/software/api>
-    * 1985, *Secrets of Advanced BodyBuilders*, Health for Life, Los Angeles, CA
-    * Mejia and Berardi, 2005, *Scrawny to Brawny*, Rodale Inc., United States
-
-* Access to google sign-in.
-    * <https://developers.google.com/identity/sign-in/web/sign-in>
-    * The user currently is required to sign in for the app to work.
-
-* Access to the calendar for workout scheduling.
-    * <https://developer.android.com/reference/java/util/Calendar>
-    * This app will access the calendar to determine which workout is scheduled for that day. The user will be able to pick a workout in case the calendar is unavailable or if they just want to do another routine that day.
-    * The app will still run but the user will need to manually pick the routine as the app won't know what day to use.
 
 ## Stretch goals/possible enhancements 
 
@@ -77,6 +61,9 @@ After logging in:
 
 * Recommend exercise routines based on the user's goal (weight loss, strength, endurance, etc.) and fitness level (sedentary, mildly active, etc.).
 
+## Technical requirements and dependencies
+* [Requirements](services.md)
+
 ## Wireframe 
 * [Wireframe](wireframe.md)
 
@@ -85,4 +72,7 @@ After logging in:
 
 ## Files
 * [Files](files.md)
+
+## Copyrights and licenses
+* [Copyrights](copyrights.md)
 
