@@ -6,11 +6,9 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Transformations;
-import androidx.lifecycle.ViewModel;
 import edu.cnm.deepdive.myworkout.model.entity.Muscle;
 import edu.cnm.deepdive.myworkout.service.MuscleRepository;
 import java.util.List;
-import org.jetbrains.annotations.NotNull;
 
 public class MusclesViewModel extends AndroidViewModel {
 
@@ -19,8 +17,7 @@ public class MusclesViewModel extends AndroidViewModel {
   private final MutableLiveData<Boolean> front;
   private final MutableLiveData<Throwable> throwable;
 
-  public MusclesViewModel(
-      @NonNull Application application) {
+  public MusclesViewModel(@NonNull Application application) {
     super(application);
     muscleRepository = new MuscleRepository(application);
     front = new MutableLiveData<>(true);

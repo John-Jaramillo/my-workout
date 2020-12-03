@@ -1,16 +1,101 @@
 {
     "muscles": [
         {
+            "name": "Anterior Deltoid",
+            "area": "Shoulders",
+            "front": true,
+            "drawable": "anterior_deltoid"
+        },
+        {
+            "name": "Biceps Brachii",
+            "area": "Arms",
+            "front": true,
+            "drawable": "biceps_brachii"
+        },
+        {
+            "name": "Biceps Femoris",
+            "area": "Lower Body",
+            "front": false,
+            "drawable": "biceps_femoris"
+        },
+        {
+            "name": "Brachialis",
+            "area": "Arms",
+            "front": true,
+            "drawable": "brachialis"
+        },
+        {
+            "name": "Gastrocnemius",
+            "area": "Lower Body",
+            "front": false,
+            "drawable": "gastrocnemius"
+        },
+        {
+            "name": "Gluteus Maximus",
+            "area": "Lower Body",
+            "front": false,
+            "drawable": "gluteus_maximus"
+        },
+        {
+            "name": "Latissimus Dorsi",
+            "area": "Upper Back",
+            "front": false,
+            "drawable": "latissimus_dorsi"
+        },
+        {
+            "name": "Obliquus Externus Abdominis",
+            "area": "Abs",
+            "front": true,
+            "drawable": "obliquus_externus_abdominis"
+        },
+        {
             "name": "Pectoralis Major",
             "area": "Chest",
             "front": true,
-            "drawable": "primary_pectoralis_major"
+            "drawable": "pectoralis_major"
         },
         {
-            "name": "Anterior Deltoid",
-            "area": "Arms",
+            "name": "Posterior Deltoid",
+            "area": "Shoulders",
+            "front": false,
+            "drawable": "posterior_deltoid"
+        },
+        {
+            "name": "Quadriceps Femoris",
+            "area": "Lower Body",
             "front": true,
-            "drawable": "primary_deltoid"
+            "drawable": "quadriceps_femoris"
+        },
+
+        {
+            "name": "Rectus Abdominis",
+            "area": "Abs",
+            "front": true,
+            "drawable": "rectus_abdominis"
+        },
+        {
+            "name": "Serratus Anterior",
+            "area": "Chest",
+            "front": true,
+            "drawable": "serratus_anterior"
+        },
+        {
+            "name": "Soleus",
+            "area": "Lower Body",
+            "front": false,
+            "drawable": "soleus"
+        },
+        {
+            "name": "Trapezius",
+            "area": "Upper Back",
+            "front": false,
+            "drawable": "trapezius"
+        },
+        {
+            "name": "Triceps Brachii",
+            "area": "Arms",
+            "front": false,
+            "drawable": "triceps_brachii"
         }
     ],
     "exercises": [

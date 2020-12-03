@@ -7,16 +7,13 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import edu.cnm.deepdive.myworkout.R;
 import edu.cnm.deepdive.myworkout.databinding.FragmentMusclesBinding;
 import edu.cnm.deepdive.myworkout.model.entity.Muscle;
-import org.jetbrains.annotations.NotNull;
 
 public class MusclesFragment extends Fragment implements OnItemSelectedListener {
 
@@ -33,11 +30,9 @@ public class MusclesFragment extends Fragment implements OnItemSelectedListener 
   }
 
   @Override
-  public void onViewCreated(@NonNull View view,
-      @Nullable Bundle savedInstanceState) {
+  public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
-    musclesViewModel =
-        new ViewModelProvider(this).get(MusclesViewModel.class);
+    musclesViewModel = new ViewModelProvider(this).get(MusclesViewModel.class);
     musclesViewModel.getMuscles().observe(getViewLifecycleOwner(), (muscles) -> {
       ArrayAdapter<Muscle> adapter =
           new ArrayAdapter<>(getContext(), android.R.layout.simple_dropdown_item_1line, muscles);
@@ -55,7 +50,8 @@ public class MusclesFragment extends Fragment implements OnItemSelectedListener 
   public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
     Muscle muscle = (Muscle) parent.getItemAtPosition(position);
     String drawableName = muscle.getDrawable();
-    int drawableId = getContext().getResources().getIdentifier(drawableName, "drawable", getContext().getPackageName());
+    int drawableId = getContext().getResources().getIdentifier(
+        drawableName, "drawable", getContext().getPackageName());
     binding.highlightedMuscle.setImageResource(drawableId);
   }
 
