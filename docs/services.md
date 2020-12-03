@@ -1,5 +1,3 @@
-# Technical Requirements and Dependencies
-
 ## Technical Requirements
 
 * Android API 29.0.3

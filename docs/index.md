@@ -2,7 +2,7 @@
 
 This Android app will allow a user to create an exercise routine by choosing from a list of weight training exercises. The user then can keep track of their progress by entering information into an exercise log. The app will allow the user to track sets, repetitions, and weight for each exercise.
 
-## Functionality
+## Intended Functionality
 
 After logging in:
 
@@ -19,7 +19,7 @@ Currently, the app allows the user to sign in using Google Sign In and the user 
 ### Cosmetic Enhancements
 * Redesigned Home Page - currently has placeholder image
 * Change of color scheme and launcher icon
-* 3d display for muscles
+* 3d images to display for muscles
 
 ### Functional Enhancements
 * Get Profile, Routine, and Log Book pages working
@@ -74,5 +74,5 @@ Currently, the app allows the user to sign in using Google Sign In and the user 
 * [Files](files.md)
 
 ## Copyrights and licenses
-* [Copyrights](copyrights.md)
+* [Copyrights & licenses](copyrights.md)
 
