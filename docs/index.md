@@ -2,6 +2,21 @@
 
 This Android app will allow a user to create an exercise routine by choosing from a list of weight training exercises. The user then can keep track of their progress by entering information into an exercise log. The app will allow the user to track sets, repetitions, and weight for each exercise. 
 
+## Current State of App
+
+Currently, the app allows the user to sign in using Google Sign In and the user is able to use the Navigation Drawer to go to each page. The exercises and muscles have been entered into the databases and the pages that are currently functioning are the Muscles page and the Exercises page. These pages query the database and display the information. The pages currently not functioning are Profile, Log Book, and Routine. These are pages where the user would be allowed to inter data into the database.
+
+### Cosmetic Enhancements
+* Redesigned Home Page - currently has placeholder image
+* Change of color scheme and launcher icon
+* 3d display for muscles
+
+### Functional Enhancements
+* Get Profile, Routine, and Log Book pages working
+* Add ability to display progress from Log Book in graphs
+* Add aerobic exercises to allow creation of complete workout routine
+* Allow access to Exercise and Muscle pages without having to log in
+
 ## Intended users
 
 * People who are new to exercising and starting an exercise routine and want to keep track of their progress.  
@@ -13,10 +28,6 @@ This Android app will allow a user to create an exercise routine by choosing fro
     > As someone with a full time job and a family, I want a faster and easier way to track my progress using my phone instead of writing in a notebook so I can devote more time to other aspects of my life.
 
 ## Functionality
-
-Without having to log in:
-
-* User will be able to browse the exercises.
 
 After logging in:
 
@@ -40,15 +51,14 @@ After logging in:
     
 ## Device/external services
 
-* The list of resistance exercises from Google APIs for Android and/or wger Workout Manager.
-    * <https://developers.google.com/android/reference/com/google/android/gms/fitness/data/WorkoutExercises>
+* The API originally intended to be used for importing exercise and muscle information into the database were deemed insufficient or unusable. A JSON file was created using information gathered from the wger API, google searches, and two books.
     * <https://wger.de/en/software/api>
-    * Access to these services would be during development to download the exercise information and store it in a SQL database. This would only require access to the service once. The wger database seems to have more information on each exercise but when I tried to browse the API I got what looked like test data so I'm not sure if I wasn't doing it right or if the API isn't usable.
+    * 1985, *Secrets of Advanced BodyBuilders*, Health for Life, Los Angeles, CA
+    * Mejia and Berardi, 2005, *Scrawny to Brawny*, Rodale Inc., United States
 
 * Access to google sign-in.
     * <https://developers.google.com/identity/sign-in/web/sign-in>
-    * Creating/editing a workout and entering/viewing tracking data will only be available if the user is logged in.
-    * The app will still run without the user logging in but with limited functionality.
+    * The user currently is required to sign in for the app to work.
 
 * Access to the calendar for workout scheduling.
     * <https://developer.android.com/reference/java/util/Calendar>
@@ -73,39 +83,6 @@ After logging in:
 ## ERD
 * [ERD](erd.md)
 
-## Entity classes
+## Files
+* [Files](files.md)
 
-* [Exercise](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/entity/Exercise.java)
-* [ExerciseMuscle](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/entity/ExerciseMuscle.java)
-* [Muscle](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/entity/Muscle.java)
-* [Progress](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/entity/Progress.java)
-* [Routine](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/entity/Routine.java)
-* [User](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/entity/User.java)
-* [Weight](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/entity/Weight.java)
-
-## DAO interfaces
-
-* [ExerciseDao](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/dao/ExerciseDao.java)
-* [ExerciseMuscleDao](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/dao/ExerciseMuscleDao.java)
-* [MuscleDao](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/dao/MuscleDao.java)
-* [ProgressDao](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/dao/ProgressDao.java)
-* [RoutineDao](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/dao/RoutineDao.java)
-* [UserDao](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/dao/UserDao.java)
-* [WeightDao](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/dao/WeightDao.java)
-
-## Database class
-
-* [MyWorkoutDatabase](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/service/MyWorkoutDatabase.java)
-
-## Repository classes
-
-* [ExerciseRepository](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/service/ExerciseRepository.java)
-* [MuscleRepository](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/service/MuscleRepository.java)
-* [ProgressRepository](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/service/ProgressRepository.java)
-* [RoutineRepository](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/service/RoutineRepository.java)
-* [UserRepository](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/service/UserRepository.java)
-* [WeightRepository](https://github.com/John-Jaramillo/my-workout/blob/master/app/src/main/java/edu/cnm/deepdive/myworkout/model/service/WeightRepository.java)
-
-## DDL
-
-* [ddl](ddl.md)
