@@ -1,10 +1,10 @@
 {
     "muscles": [
         {
-            "name": "Anterior Deltoid",
+            "name": "Deltoid",
             "area": "Shoulders",
             "front": true,
-            "drawable": "anterior_deltoid"
+            "drawable": "deltoid"
         },
         {
             "name": "Biceps Brachii",
@@ -38,7 +38,7 @@
         },
         {
             "name": "Latissimus Dorsi",
-            "area": "Upper Back",
+            "area": "Back",
             "front": false,
             "drawable": "latissimus_dorsi"
         },
@@ -66,7 +66,6 @@
             "front": true,
             "drawable": "quadriceps_femoris"
         },
-
         {
             "name": "Rectus Abdominis",
             "area": "Abs",
@@ -87,7 +86,7 @@
         },
         {
             "name": "Trapezius",
-            "area": "Upper Back",
+            "area": "Back",
             "front": false,
             "drawable": "trapezius"
         },

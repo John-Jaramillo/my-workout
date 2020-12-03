@@ -21,22 +21,27 @@
     app:layout_constraintGuide_percent="0.4"
     android:orientation="horizontal"/>
 
-  <Button
+  <ToggleButton
     android:id="@+id/front"
-    android:text="FRONT"
+    android:textOn="FRONT"
+    android:textOff="front"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:padding="@dimen/half_margin"
+    android:checked="true"
+    android:enabled="false"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toStartOf="@id/back"
     app:layout_constraintTop_toBottomOf="@id/horizontal_guideline_10"/>
 
-  <Button
+  <ToggleButton
     android:id="@+id/back"
-    android:text="BACK"
+    android:textOn="BACK"
+    android:textOff="back"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:padding="@dimen/half_margin"
+    android:checked="false"
     app:layout_constraintStart_toEndOf="@id/front"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toBottomOf="@id/horizontal_guideline_10"/>
@@ -67,7 +72,7 @@
     android:contentDescription="deltoid"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:src="@drawable/anterior_deltoid"
+    android:src="@drawable/deltoid"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toTopOf="@id/muscles_image"/>

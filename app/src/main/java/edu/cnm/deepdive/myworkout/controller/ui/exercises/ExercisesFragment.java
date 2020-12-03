@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider;
 import edu.cnm.deepdive.myworkout.R;
 import edu.cnm.deepdive.myworkout.databinding.FragmentExercisesBinding;
 import edu.cnm.deepdive.myworkout.model.entity.Exercise;
+import edu.cnm.deepdive.myworkout.model.entity.Muscle.Area;
 
 public class ExercisesFragment extends Fragment implements OnItemSelectedListener {
 
@@ -24,6 +25,9 @@ public class ExercisesFragment extends Fragment implements OnItemSelectedListene
     binding = FragmentExercisesBinding.inflate(inflater, container, false);
     binding.targetGroupSpinner.setOnItemSelectedListener(this);
     binding.exercisesSpinner.setOnItemSelectedListener(this);
+    ArrayAdapter<Area> adapter =
+        new ArrayAdapter<>(getContext(), android.R.layout.simple_dropdown_item_1line, Area.values());
+    binding.targetGroupSpinner.setAdapter(adapter);
     return binding.getRoot();
   }
 
@@ -40,11 +44,12 @@ public class ExercisesFragment extends Fragment implements OnItemSelectedListene
 
   @Override
   public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-    Exercise exercise = (Exercise) parent.getItemAtPosition(position);
-    String exerciseDescription = exercise.getDescription();
-    int descriptionId = getContext().getResources().getIdentifier(
-        exerciseDescription, "description", getContext().getPackageName());
-    binding.exerciseDescription.setText(descriptionId);
+    if (parent == binding.exercisesSpinner) {
+      Exercise exercise = (Exercise) parent.getItemAtPosition(position);
+      binding.exerciseDescription.setText(exercise.getDescription());
+    } else {
+      exercisesViewModel.setArea((Area) parent.getItemAtPosition(position));
+    }
   }
 
   @Override

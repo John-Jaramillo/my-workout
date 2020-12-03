@@ -75,4 +75,10 @@ public class Exercise {
   public void setSecondaryMuscles(List<String> secondaryMuscles) {
     this.secondaryMuscles = secondaryMuscles;
   }
+
+  @NonNull
+  @Override
+  public String toString() {
+    return name;
+  }
 }

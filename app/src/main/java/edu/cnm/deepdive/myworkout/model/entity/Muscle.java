@@ -7,6 +7,8 @@ import androidx.room.PrimaryKey;
 import androidx.room.TypeConverter;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import java.util.Arrays;
+import java.util.stream.Collectors;
 
 @Entity
 public class Muscle {
@@ -81,20 +83,18 @@ public class Muscle {
   public enum Area {
     @SerializedName("Chest")
     CHEST,
-    @SerializedName("Upper Back")
-    UPPER_BACK,
-    @SerializedName("Lower Back")
-    LOWER_BACK,
+    @SerializedName("Back")
+    BACK,
     @SerializedName("Abs")
     ABS,
-    @SerializedName("Neck")
-    NECK,
     @SerializedName("Shoulders")
     SHOULDERS,
     @SerializedName("Arms")
     ARMS,
     @SerializedName("Lower Body")
     LOWER_BODY;
+
+
 
     @TypeConverter
     public static Integer areaToInteger(Area value) {
@@ -104,6 +104,16 @@ public class Muscle {
     @TypeConverter
     public static Area integerToArea(Integer value) {
       return (value != null) ? Area.values()[value] : null;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+      return Arrays.stream(name().toLowerCase().split("_"))
+          .map(String::toCharArray)
+          .peek((chars) -> chars[0] = Character.toUpperCase(chars[0]))
+          .map(String::new)
+          .collect(Collectors.joining(" "));
     }
   }
   

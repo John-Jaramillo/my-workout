@@ -29,23 +29,36 @@ public class UserRepository {
   public Single<User> getOrCreate(@NonNull GoogleSignInAccount account) {
     return userDao.selectByOauthKey(account.getId())
         .switchIfEmpty((SingleSource<User>) observer -> {
-            User user = new User();
-            user.setName(account.getDisplayName());
-            user.setOauthKey(account.getId());
-            userDao.insert(user)
-                .map((id) -> {
-                  user.setId(id);
-                  return user;
-                })
-                .subscribe(observer);
+          User user = new User();
+          user.setName(account.getDisplayName());
+          user.setOauthKey(account.getId());
+          userDao.insert(user)
+              .map((id) -> {
+                user.setId(id);
+                return user;
+              })
+              .subscribe(observer);
         })
         .subscribeOn(Schedulers.io());
   }
 
   public Completable delete(User user) {
-    return (user.getId() == 0)
-        ? Completable.complete()
-        : userDao.delete(user).ignoreElement();
+    return (
+        (user.getId() == 0)
+            ? Completable.complete()
+            : userDao.delete(user).ignoreElement()
+    )
+        .subscribeOn(Schedulers.io());
+  }
+
+  public Completable save(User user) {
+    return (
+        (user.getId() == 0)
+            ? userDao.insert(user)
+            : userDao.update(user)
+    )
+        .ignoreElement()
+        .subscribeOn(Schedulers.io());
   }
 
   public LiveData<User> getUserById(long userId) {

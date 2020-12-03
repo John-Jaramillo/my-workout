@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -23,8 +25,22 @@ public class MusclesFragment extends Fragment implements OnItemSelectedListener 
   public View onCreateView(@NonNull LayoutInflater inflater,
       ViewGroup container, Bundle savedInstanceState) {
     binding = FragmentMusclesBinding.inflate(inflater, container, false);
-    binding.back.setOnClickListener((v) -> setFront(false));
-    binding.front.setOnClickListener((v) -> setFront(true));
+    binding.back.setOnCheckedChangeListener((buttonView, isChecked) -> {
+      if (isChecked) {
+        setFront(false);
+        binding.front.setChecked(false);
+        binding.front.setEnabled(true);
+        binding.back.setEnabled(false);
+      }
+    });
+    binding.front.setOnCheckedChangeListener((buttonView, isChecked) -> {
+      if (isChecked) {
+        setFront(true);
+        binding.back.setChecked(false);
+        binding.back.setEnabled(true);
+        binding.front.setEnabled(false);
+      }
+    });
     binding.musclesSpinner.setOnItemSelectedListener(this);
     return binding.getRoot();
   }

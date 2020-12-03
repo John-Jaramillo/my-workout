@@ -26,7 +26,7 @@ public class Weight {
 
   @NonNull
   @ColumnInfo(index = true)
-  private Date date;
+  private Date date = new Date();
 
 
   public long getId() {
