@@ -15,6 +15,7 @@
       android:id="@+id/information"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:textSize="16dp"
       android:text="Select an area and get a list of exercises that affect that area. This includes exercises where the target muscle is the primary focus and exercises where the muscle is a secondary mover."
       android:padding="8dp"
       app:layout_constraintStart_toStartOf="parent"
