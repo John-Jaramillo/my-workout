@@ -8,11 +8,9 @@ import edu.cnm.deepdive.myworkout.model.dao.UserDao;
 import edu.cnm.deepdive.myworkout.model.entity.User;
 import io.reactivex.Completable;
 import io.reactivex.Single;
-import io.reactivex.SingleObserver;
 import io.reactivex.SingleSource;
 import io.reactivex.schedulers.Schedulers;
 import java.util.List;
-import org.jetbrains.annotations.NotNull;
 
 public class UserRepository {
 

@@ -15,92 +15,34 @@
   <string name="action_settings">Settings</string>
 
   <string name="menu_home">Home</string>
-  <string name="menu_gallery">Gallery</string>
-  <string name="menu_slideshow">Slideshow</string>
   <string name="menu_profile">Profile</string>
   <string name="menu_log">Log Book</string>
   <string name="menu_exercises">Exercises</string>
   <string name="menu_muscles">Muscles</string>
   <string name="menu_routine">Routine</string>
 
-  <string name="exercises_title">EXERCISES</string>
-  <string name="muscles_title">MUSCLES</string>
-
   <string name="chest_prompt">CHEST</string>
   <string name="muscles_prompt">Muscles</string>
+  <string name="main_picture">main picture</string>
+  <string name="my_workout_title">MY WORKOUT</string>
+  <string name="muscles_front">muscles_front</string>
+  <string name="main_picture">main picture</string>
+  <string name="current_weight">Current Weight</string>
+  <string name="name_profile">Name :</string>
+  <string name="name_hint">Name</string>
+  <string name="height_profile">Height :</string>
+  <string name="height_hint">Height</string>
+  <string name="weight_profile">Weight :</string>
+  <string name="update_botton">Update</string>
+  <string name="exercise_info">Select an area and get a list of exercises that affect that area. This includes exercises where the target muscle is the primary focus and exercises where the muscle is a secondary mover.</string>
+  <string name="target_group">TARGET GROUP</string>
+  <string name="exercises">EXERCISES</string>
+  <string name="front_highlight">FRONT</string>
+  <string name="front_highlight_off">front</string>
+  <string name="back_hightlight">BACK</string>
+  <string name="back_highlight_off">back</string>
+  <string name="anterior_view">anterior view</string>
+  <string name="deltoid">deltoid</string>
 
-  <string-array name="muscles_anterior_array">
-    <item>Anterior Deltoid</item>
-    <item>Biceps Brachii</item>
-    <item>Brachialis</item>
-    <item>Obliquus Externus Abdominis</item>
-    <item>Pectoralis Major</item>
-    <item>Quadriceps Femoris</item>
-    <item>Rectus Abdominis</item>
-    <item>Serratus Anterior</item>
-  </string-array>
-
-  <string-array name="muscles_posterior_array">
-    <item>Biceps Femoris</item>
-    <item>Gastrocnemius</item>
-    <item>Gluteus Maximus</item>
-    <item>Latissimus Dorsi</item>
-    <item>Posterior Deltoid</item>
-    <item>Soleus</item>
-    <item>Trapezius</item>
-    <item>Triceps Brachii</item>
-  </string-array>
-
-  <string-array name="muscles_target_group">
-    <item>CHEST</item>
-    <item>UPPER BACK</item>
-    <item>LOWER BACK</item>
-    <item>ABS</item>
-    <item>NECK</item>
-    <item>SHOULDERS</item>
-    <item>ARMS</item>
-    <item>LOWER BODY</item>
-  </string-array>
-
-  <string-array name="exercises_chest_array">
-    <item>Bench Press</item>
-    <item>Bench Press, Decline</item>
-    <item>Bench Press, Incline</item>
-    <item>Bench Press, Reverse Grip</item>
-    <item>Burpees</item>
-    <item>Butterfly</item>
-    <item>Cable Cross Over</item>
-    <item>Pushup</item>
-    <item>Pushup, Decline</item>
-    <item>Pushup, Incline</item>
-  </string-array>
-
-  <string-array name="exercises_upper_back_array">
-    <item>Rows</item>
-  </string-array>
-
-  <string-array name="exercises_lower_back_array">
-    <item>LOWER BACK</item>
-  </string-array>
-
-  <string-array name="exercises_abs_array">
-    <item>ABS</item>
-  </string-array>
-
-  <string-array name="exercises_neck_array">
-    <item>NECK</item>
-  </string-array>
-
-  <string-array name="exercises_shoulders_array">
-    <item>SHOULDERS</item>
-  </string-array>
-
-  <string-array name="exercises_arms_array">
-    <item>ARMS</item>
-  </string-array>
-
-  <string-array name="exercises_lower_body_array">
-    <item>LOWER BODY</item>
-  </string-array>
 
 </resources>

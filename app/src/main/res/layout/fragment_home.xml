@@ -20,7 +20,7 @@
 
   <ImageView
     android:id="@+id/muscles_front"
-    android:contentDescription="muscles_front"
+    android:contentDescription="@string/muscles_front"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:src="@drawable/muscular_system_front"

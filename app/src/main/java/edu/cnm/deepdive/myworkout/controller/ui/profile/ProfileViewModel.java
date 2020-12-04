@@ -8,12 +8,10 @@ import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.OnLifecycleEvent;
-import androidx.lifecycle.ViewModel;
 import edu.cnm.deepdive.myworkout.model.entity.User;
 import edu.cnm.deepdive.myworkout.service.GoogleSignInService;
 import edu.cnm.deepdive.myworkout.service.UserRepository;
 import io.reactivex.disposables.CompositeDisposable;
-import org.jetbrains.annotations.NotNull;
 
 public class ProfileViewModel extends AndroidViewModel implements LifecycleObserver {
 

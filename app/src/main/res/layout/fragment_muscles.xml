@@ -23,8 +23,8 @@
 
   <ToggleButton
     android:id="@+id/front"
-    android:textOn="FRONT"
-    android:textOff="front"
+    android:textOn="@string/front_highlight"
+    android:textOff="@string/front_highlight_off"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:padding="@dimen/half_margin"
@@ -36,8 +36,8 @@
 
   <ToggleButton
     android:id="@+id/back"
-    android:textOn="BACK"
-    android:textOff="back"
+    android:textOn="@string/back_hightlight"
+    android:textOff="@string/back_highlight_off"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:padding="@dimen/half_margin"
@@ -59,7 +59,7 @@
 
   <ImageView
     android:id="@+id/muscles_image"
-    android:contentDescription="anterior view"
+    android:contentDescription="@string/anterior_view"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:src="@drawable/muscular_system_front"
@@ -69,7 +69,7 @@
 
   <ImageView
     android:id="@+id/highlighted_muscle"
-    android:contentDescription="deltoid"
+    android:contentDescription="@string/deltoid"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:src="@drawable/deltoid"

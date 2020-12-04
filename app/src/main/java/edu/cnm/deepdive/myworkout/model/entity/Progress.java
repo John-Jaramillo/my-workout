@@ -3,7 +3,6 @@ package edu.cnm.deepdive.myworkout.model.entity;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
-import androidx.room.Index;
 import androidx.room.PrimaryKey;
 import io.reactivex.annotations.NonNull;
 import java.util.Date;
